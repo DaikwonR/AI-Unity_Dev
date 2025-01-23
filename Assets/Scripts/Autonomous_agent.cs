@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class AutonomousAgent : AiAgent
 {
+    [SerializeField] AutonomousAgent_data data;
+
     [SerializeField] Perception perception;
     [Range(5, 25)][SerializeField] int forceApplied = 5;
+
+
 
     // Update is called once per frame
     void Update()

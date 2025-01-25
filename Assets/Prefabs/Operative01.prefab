@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4710742672631294322}
   - component: {fileID: 2504023405025193423}
+  - component: {fileID: 8854626577221966823}
   - component: {fileID: 2591687570206705384}
-  - component: {fileID: 3835469069056449453}
   - component: {fileID: 4338401372331294547}
   - component: {fileID: 7892286199751230245}
   - component: {fileID: 6704248475734794146}
@@ -50,9 +50,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff10983bc4e6e2441a000853324f570d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movement: {fileID: 3835469069056449453}
-  perception: {fileID: 2591687570206705384}
+  movement: {fileID: 8854626577221966823}
+  data: {fileID: 0}
+  seekPerception: {fileID: 0}
+  fleePerception: {fileID: 2591687570206705384}
   forceApplied: 14
+--- !u!114 &8854626577221966823
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559448444561492042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a667352eaf1e68e489a3affb538e7406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxSpeed: 5
+  minSpeed: 5
+  maxForce: 5
 --- !u!114 &2591687570206705384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66,21 +83,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Agent01
-  maxDistance: 1
-  maxAngle: 0
---- !u!114 &3835469069056449453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7559448444561492042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a667352eaf1e68e489a3affb538e7406, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 9232a0b84f8438a47bd463a963a78a49, type: 2}
+  maxDistance: 5.03
+  maxAngle: 132
 --- !u!33 &4338401372331294547
 MeshFilter:
   m_ObjectHideFlags: 0

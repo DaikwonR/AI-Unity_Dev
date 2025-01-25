@@ -11,6 +11,7 @@ public static class Utilities
         v.x = Wrap(v.x, min.x, max.x);
         v.y = Wrap(v.y, min.y, max.y);
         v.z = Wrap(v.z, min.z, max.z);
+
         return v;
     }
 }

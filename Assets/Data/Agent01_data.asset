@@ -13,5 +13,10 @@ MonoBehaviour:
   m_Name: Agent01_data
   m_EditorClassIdentifier: 
   displacement: 5.86
-  distance: 4.28
+  distance: 0
   radius: 7.46
+  cohesionWeight: 3.8
+  separationWeight: 7
+  separationRadius: 2.3
+  alignmentWeight: 0
+  obstacleWeight: 17.1

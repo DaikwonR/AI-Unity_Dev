@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 9134731609867551233}
   - component: {fileID: 1540603367595592946}
   - component: {fileID: 3824023046729713060}
+  - component: {fileID: 3680770858580873746}
   - component: {fileID: 547236374595278445}
   - component: {fileID: 7710435873923110450}
   - component: {fileID: 2749414793609693031}
@@ -51,12 +52,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 1540603367595592946}
-  data: {fileID: 0}
-  displacement: 20
-  distance: 10.4
-  radius: 14.9
+  data: {fileID: 11400000, guid: 3e4cedb26643114498a107e726909dff, type: 2}
   seekPerception: {fileID: 3824023046729713060}
   fleePerception: {fileID: 0}
+  flockPerception: {fileID: 3824023046729713060}
+  obstaclePerception: {fileID: 3680770858580873746}
   forceApplied: 5
 --- !u!114 &1540603367595592946
 MonoBehaviour:
@@ -70,6 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a667352eaf1e68e489a3affb538e7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 0}
   maxSpeed: 5
   minSpeed: 5
   maxForce: 5
@@ -86,8 +87,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Operative01
+  description: 
   maxDistance: 5.05
   maxAngle: 155
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &3680770858580873746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 703785905365695501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c8ea1984ff4a1419d92e5deb28cb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: 
+  description: Obstacle
+  maxDistance: 3.62
+  maxAngle: 120
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  numRaycast: 8
 --- !u!33 &547236374595278445
 MeshFilter:
   m_ObjectHideFlags: 0

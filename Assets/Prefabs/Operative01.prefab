@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2504023405025193423}
   - component: {fileID: 8854626577221966823}
   - component: {fileID: 2591687570206705384}
+  - component: {fileID: -9104844200534105808}
+  - component: {fileID: 3422185337054508344}
   - component: {fileID: 4338401372331294547}
   - component: {fileID: 7892286199751230245}
   - component: {fileID: 6704248475734794146}
@@ -51,9 +53,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 8854626577221966823}
-  data: {fileID: 0}
+  data: {fileID: 11400000, guid: d61ff3a40fe142c4eb10c8960c41cc1e, type: 2}
   seekPerception: {fileID: 0}
   fleePerception: {fileID: 2591687570206705384}
+  flockPerception: {fileID: 3422185337054508344}
+  obstaclePerception: {fileID: -9104844200534105808}
   forceApplied: 14
 --- !u!114 &8854626577221966823
 MonoBehaviour:
@@ -67,6 +71,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a667352eaf1e68e489a3affb538e7406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  data: {fileID: 0}
   maxSpeed: 5
   minSpeed: 5
   maxForce: 5
@@ -83,8 +88,51 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tagName: Agent01
+  description: Flee-Agent01
   maxDistance: 5.03
   maxAngle: 132
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &-9104844200534105808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559448444561492042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13c8ea1984ff4a1419d92e5deb28cb89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: 
+  description: Obstacle
+  maxDistance: 6.47
+  maxAngle: 120
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 128
+  numRaycast: 8
+--- !u!114 &3422185337054508344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559448444561492042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76319a1b8eeb0da41b1745e381b1ba8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagName: Op 01
+  description: Flock
+  maxDistance: 5
+  maxAngle: 180
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
 --- !u!33 &4338401372331294547
 MeshFilter:
   m_ObjectHideFlags: 0

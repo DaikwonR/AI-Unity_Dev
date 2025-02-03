@@ -2,7 +2,8 @@ using UnityEngine;
 
 public abstract class Movement : MonoBehaviour
 {
-    //public Movement_data data;
+    public Movement_data data;
+
     [SerializeField] public float maxSpeed = 5;
     [SerializeField] public float minSpeed = 5;
     [SerializeField] public float maxForce = 5;
@@ -12,4 +13,5 @@ public abstract class Movement : MonoBehaviour
     public Vector3 Direction { get {  return Velocity.normalized; } }
 
     public abstract void ApplyForce(Vector3 force);
+    public abstract void MoveTowards(Vector3 position);
 }

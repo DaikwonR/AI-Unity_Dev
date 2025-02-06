@@ -11,7 +11,7 @@ public class Waypoint : MonoBehaviour
         if (other.gameObject.TryGetComponent<Nav_agent>(out Nav_agent agent))
         {
             print("next");
-            agent.location = locations[Random.Range(0, locations.Length)];
+            //agent.location = locations[Random.Range(0, locations.Length)];
         }
     }
 }

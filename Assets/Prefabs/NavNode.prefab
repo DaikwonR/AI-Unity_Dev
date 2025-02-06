@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4246518711995801729}
   - component: {fileID: 1377075011820209468}
   - component: {fileID: 1400461602903151020}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NavNode
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3932eba6df3307e4481957939e730aa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  neighbors: []
 --- !u!33 &4246518711995801729
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -62,7 +63,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6816085422429490819}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1

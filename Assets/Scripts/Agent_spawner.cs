@@ -23,13 +23,21 @@ public class Agent_spawner : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(1) || (Input.GetMouseButton(1) && Input.GetKey(KeyCode.LeftShift)))
+        if (ops != null)
         {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, layersMask))
+            if (Input.GetMouseButtonDown(1) || (Input.GetMouseButton(1) && Input.GetKey(KeyCode.LeftShift)))
             {
-                Instantiate(ops[index], hitInfo.point + Random.onUnitSphere * randomMax * Random.value, Quaternion.identity);
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out RaycastHit hitInfo, 100, layersMask))
+                {
+                    Instantiate(ops[index], hitInfo.point + Random.onUnitSphere * randomMax * Random.value, Quaternion.identity);
+                }
             }
+        }
+        else
+        {
+            Debug.Log("You only have one type set!");
+            //Console.WriteLine("You only have one type set");
         }
         
     }

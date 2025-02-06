@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minSpeed: 5.8
   maxSpeed: 8.8
-  maxForce: 15.9
+  maxForce: 20

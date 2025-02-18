@@ -183,9 +183,9 @@ public class AutonomousAgent : AiAgent
 
     private Vector3 GetSteeringForce(Vector3 direction)
     {
-        Vector3 desired = direction.normalized * movement.maxSpeed;
+        Vector3 desired = direction.normalized * movement.data.maxSpeed;
         Vector3 steer = desired - movement.Velocity;
-        Vector3 force = Vector3.ClampMagnitude(steer, movement.maxForce);
+        Vector3 force = Vector3.ClampMagnitude(steer, movement.data.maxForce);
 
         return force;
     }
